@@ -4,16 +4,6 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class GildedRoseTest {
-
-    @Test
-    fun foo() {
-        val items = arrayOf<Item>(Item("foo", 0, 0))
-        val app = GildedRose(items)
-        app.updateQuality()
-        assertEquals("fixme", app.items[0].name)
-
-    }
-
     /*
      quality degradation check
      */
@@ -43,7 +33,6 @@ class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals((app.items[0].quality > 1), true)
-        val items a
     }
 
     @Test
@@ -88,18 +77,19 @@ class GildedRoseTest {
         app.updateQuality()
         assertEquals(app.items[0].quality,0)
     }
-    @Test
-    fun conjureTest()
-    {
-        val items = arrayOf<Item>(Item("Conjured item",1,10),Item("item",1,10))
-        val app = GildedRose(items)
-        app.updateQuality()
-        assertEquals(app.items[0].quality,8)
-        assertEquals(app.items[1].quality,9)
-        app.updateQuality()
-        assertEquals(app.items[0].quality,4)
-        assertEquals(app.items[1].quality,7)
-    }
+
+//    @Test
+//    fun conjureTest()
+//    {
+//        val items = arrayOf<Item>(Item("Conjured item",1,10),Item("item",1,10))
+//        val app = GildedRose(items)
+//        app.updateQuality()
+//        assertEquals(app.items[0].quality,8)
+//        assertEquals(app.items[1].quality,9)
+//        app.updateQuality()
+//        assertEquals(app.items[0].quality,4)
+//        assertEquals(app.items[1].quality,7)
+//    }
 }
 
 
